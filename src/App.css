@@ -1,0 +1,97 @@
+:root {
+    --color-blue: #0294d0;
+    --color-purple: #be198d;
+    --color-orange: #ee9037;
+    --three-color-gradient-h: linear-gradient(90deg, var(--color-orange), var(--color-purple), var(--color-blue));
+    --three-color-gradient-v: linear-gradient(0deg, var(--color-orange), var(--color-purple), var(--color-blue));
+}
+
+/*.App {
+    text-align: center;
+}*/
+
+.App-logo {
+    height: 50px;
+    pointer-events: none;
+    display: inline-block;
+}
+
+.App-header {
+    height: 72px;
+    width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: var(--color-orange);
+    display: block;
+}
+
+.App-link:visited {
+    color: var(--color-purple);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.Loader {
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.hero-text {
+    background: var(--three-color-gradient-h);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: lighter;
+    font-size: 42px;
+    display: inline-block;
+    margin: 0;
+}
+
+.fade-in {
+    animation-name: fade-in-animation;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.fade-out {
+    animation-name: fade-out-animation;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-out-animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: collapse;
+    }
+}
