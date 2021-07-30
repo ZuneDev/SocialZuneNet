@@ -19,7 +19,7 @@ const Router = ReactRouterDOM.BrowserRouter;
 ReactDOM.render(
     <React.StrictMode>
         <Header/>
-        <div className="App XbcShellMain">
+        <div className="App ZPage Zwrapper">
             <Router>
                 <Switch>
                     <Route exact path="/" component={Home}/>
