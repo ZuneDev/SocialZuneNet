@@ -4,7 +4,7 @@ import {Helmet} from "react-helmet";
 import {musicbrainzBase} from "../api/constants";
 
 const ReactRouterDOM = require('react-router-dom');
-const { Redirect, useSearchParams } = ReactRouterDOM;
+const { Routes, Redirect, useSearchParams } = ReactRouterDOM;
 
 function RedirectPage() {
 
@@ -18,9 +18,18 @@ function RedirectPage() {
             url = musicbrainzBase + "/release/" + searchParams.get("id");
             console.log(url)
             break;
+        default:
+            url = musicbrainzBase + "/" + type +"/" + searchParams.get("id");
+            console.log(url)
+            break;
     }
 
-    return <Redirect to={url}/>;
+    window.location.replace(url);
+    return (
+        <div>
+            <p style={{ fontSize: 20 }}>opening {type} in musicbrainz...</p>
+        </div>
+    );
 
 }
 
