@@ -1,11 +1,11 @@
-import React, {PointerEvent, FormEvent} from 'react';
+import React, { PointerEvent, FormEvent } from 'react';
 import logo from "../assets/header_logo.svg";
 import spacer from "../assets/spacer.gif"
 import zunetile_default from "../assets/zunetile_default.svg"
 //import {Button, Form, FormControl, Nav, NavDropdown, Navbar} from "react-bootstrap";
 import '../assets/zune.css';
 
-class Header extends React.Component{
+class Header extends React.Component {
     XbcNav_mainOver(event: PointerEvent<HTMLElement>) {
         let menu = event.currentTarget.getElementsByTagName("ul")[0];
         menu.style.display = "block";
